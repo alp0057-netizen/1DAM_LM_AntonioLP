@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Datos personales</title>
+</head>
+<body>
+
+  <form action="proceso.php" method="post">
+
+    <fieldset>
+      <legend>Datos personales</legend>
+      <label>Nombre: </label>
+      <input type="text" name="nombre"><br><br>
+
+      <label>Edad: </label>
+      <input type="text" name="edad">
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Datos de interés</legend>
+
+      <label>¿Estás casado?</label><br>
+      <input type="radio" name="casado" value="si"> Sí
+      <input type="radio" name="casado" value="no"> No
+      <br><br>
+
+      <label>Deportes:</label><br>
+      <input type="checkbox" name="deporte" value="baloncesto"> Baloncesto
+      <input type="checkbox" name="deporte" value="futbol"> Fútbol
+      <input type="checkbox" name="deporte" value="ciclismo"> Ciclismo
+    </fieldset>
+
+    <br>
+
+    <input type="submit" value="Enviar">
+
+  </form>
+
+</body>
+</html>
