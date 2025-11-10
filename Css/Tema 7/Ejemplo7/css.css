@@ -1,0 +1,9 @@
+  table{caption-side:bottom;
+        border-spacing:15px;
+        width:100%;
+        border:solid 3px blue;}
+    th,td{border: solid 1px black;
+        height:40px;
+        vertical-align:middle;
+        text-align:center;}
+    th{background-color:cyan;}

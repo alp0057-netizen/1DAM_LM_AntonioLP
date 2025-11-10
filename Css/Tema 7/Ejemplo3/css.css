@@ -1,0 +1,17 @@
+   #palabra1{
+            font-family:'Helvetica';
+            font-size:24px;
+        }
+
+        #palabra2{
+            font-style:italic;
+            font-weight:bold;
+            font-size:2rem;
+        }
+
+        #palabra3{
+            font-family:'Brush Script MT';
+            font-weight:300;
+            font-size:300%;
+            color:red;
+        }
