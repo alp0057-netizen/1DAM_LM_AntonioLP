@@ -1,0 +1,7 @@
+   #lista1{
+            list-style-type: square;
+            list-style-position: inside;
+        }
+        #lista2{
+            list-style-image: url("vCss/Tema 7/Ejemplo4/186755288-dibujos-animados-de-estrella-fugaz.webp");
+        }
