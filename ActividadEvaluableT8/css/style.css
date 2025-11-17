@@ -1,0 +1,95 @@
+body {
+    background-color: aqua;
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#contenido{
+     background-image: url("/ActividadEvaluableT8/img/fondo.jpg");
+            background-repeat: no-repeat; 
+            background-position: bottom; 
+            background-size: 1500px auto;
+            border: solid 2px blue;
+            padding: 15px;
+            margin-left: 20%;
+             margin-right: 20%;
+}
+#menu {
+    text-align: center;
+    background-color: aqua;
+    color: blue;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+#menu a{
+    text-align: center;
+    text-decoration: none;
+}
+h1{
+     border: solid 2px blue;
+    background-color: aqua;
+    color: blue;
+    text-transform: uppercase;
+    text-align: center;
+}
+h2{
+    border: solid 2px blue;
+    background-color: aqua;
+    color: blue;
+    text-transform: uppercase;
+    text-align:  auto left;
+   
+     
+}
+table{
+    border: solid 2px blue;
+     margin-left: 3%;
+     margin-right: 3%;
+     caption-side: bottom;
+     border-spacing: none;
+    table-layout: auto;
+}
+th,td{border: solid 1px blue;
+        height:40px;
+        vertical-align:middle;
+       text-align:center;}
+td{
+    color: blue;
+}
+ th{background-color:cyan;
+        color: red;
+ }
+ tr:nth-child(odd) {
+            background-color: aqua
+        }
+
+ tr:hover {
+            background-color: rgb(150, 150, 175);
+        }
+ a:hover{
+     background-color: rgb(150, 150, 175);
+}
+
+#autor{
+    text-align: center;
+    color: blue;
+    
+}
+caption {
+    color: blue;
+}
+
+#autor::after {
+    content: " Antonio Lizana Palomino";
+}
+
+ul :first-letter{
+    text-transform: uppercase;
+}
+ ul li:first-child{
+    color: blue;
+}
+ul li:last-child{
+    color: blue;
+}
