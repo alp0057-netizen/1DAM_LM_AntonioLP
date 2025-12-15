@@ -1,0 +1,176 @@
+
+/* Aplica el modelo de caja border-box a todos los elementos (*) para que el padding y el borde no aumenten el ancho/alto total. Esto hace que el diseño sea más predecible. */
+* {
+    box-sizing: border-box;
+    /* Usamos una fuente más estándar para asegurar compatibilidad si 'Playwrite NO' no carga, manteniendo 'cursive' como respaldo para un estilo personal. */
+    font-family: Verdana, sans-serif; 
+}
+
+/* Contenedor principal de los enlaces. Es la barra negra superior. */
+#enlaces {
+    background: black;
+    padding: 25px; /* Espacio interior para que el menú no se vea apretado. */
+    border: solid 2px white; /* Un borde blanco simple para enmarcar la barra. */
+}
+
+/* Estilo para la lista desordenada dentro del menú. */
+#enlaces ul {
+    list-style: none; /* Quitamos los puntos de la lista (bullets). */
+    margin: 2px;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilo para cada elemento de la lista (cada enlace del menú). */
+#enlaces li {
+    float: left; /* Hacemos que floten a la izquierda para que se pongan uno al lado del otro. */
+    margin-right: 20px; /* Separación entre los enlaces. */
+}
+
+/* Efecto al pasar el ratón (hover) sobre los enlaces del menú. */
+#enlaces a {
+    color: white; /* Aseguramos que el texto del enlace sea blanco por defecto */
+    text-decoration: none; /* Quitamos el subrayado. */
+    transition: background-color 0.3s; /* ¡Sutil cambio! Agregamos una transición suave para el cambio de color de fondo. */
+}
+
+#enlaces a:hover {
+    background-color: white; /* El fondo se vuelve blanco al pasar el ratón. */
+    color: black; /* ¡Sutil cambio! Hacemos que el texto se vuelva negro para que contraste sobre el fondo blanco. */
+    padding: 5px;
+}
+
+/* Color especial para los enlaces que ya han sido visitados (un toque de historia). */
+a:visited {
+    color: lightyellow;
+}
+
+
+#bienvenida {
+    padding: 70px;
+    text-align: center;
+    color: white;
+    /* Sombra al texto para que resalte y tenga un efecto 3D. */
+    text-shadow: 5px 5px 5px #333; /* ¡Sutil cambio! Hacemos la sombra más corta y más oscura (gris oscuro). */
+    /* Crea un degradado radial (circular) con los colores darkcyan y cyan, ¡parece un brillo! */
+    background: radial-gradient(circle, darkcyan, cyan);
+}
+
+
+#sobre_mi {
+    text-align: left;
+    background: white;
+    padding: 10px;
+    border-radius: 15px; /* Bordes redondeados para suavizar la caja. */
+    /* Sombra para dar la ilusión de que la caja está levantada. */
+    box-shadow: 5px 5px 15px 5px #ccc; /* ¡Sutil cambio! Sombra más suave y extendida (gris claro). */
+    float: left; /* Hace que el bloque flote a la izquierda. */
+    width: 60%; /* Ocupa el 60% del espacio horizontal. */
+    position: relative; /* Es la base para cualquier posición absoluta dentro de ella. */
+    transition: all 0.5s ease-in-out; /* ¡Sutil cambio! Transición más específica y con curva de aceleración para un toque moderno. */
+}
+
+#sobre_mi:hover {
+    /* Mueve la sección un poco a la derecha y abajo (translate) y la agranda ligeramente (scale) */
+    transform: translate(20px, -10px) scale(1.02); /* ¡Sutil cambio! Usamos translate y scale para una animación de "levantar y mover". */
+}
+
+/* La imagen de perfil. */
+#foto {
+    float: right; /* La imagen flota a la derecha del texto. */
+    width: 100px;
+    margin-top: 0;
+    transition: transform 5s ease; /* ¡Sutil cambio! Reducimos la duración para que el efecto sea visible, pero sigue siendo largo. */
+}
+
+#foto:hover {
+    /* La imagen rota 360 grados y se duplica en tamaño al pasar el ratón. */
+    transform: scale(2) rotate(360deg); /* ¡Sutil cambio! Reducimos la rotación a 360 grados (una vuelta completa) para un efecto más limpio y funcional. */
+}
+
+
+#redes {
+    z-index: 1; /* ¡Sutil cambio! Cambiamos a z-index positivo para que esté por encima de otros elementos si hay superposición. */
+    width: 30%; /* ¡Sutil cambio! Ocupa un poco más de espacio (30%). */
+    float: right;
+    text-align: center;
+    position: relative;
+    border: solid 1px #eee; /* ¡Sutil cambio! Borde más delgado y gris muy claro. */
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* ¡Sutil cambio! Una sombra más moderna y suave (desplazamiento vertical). */
+    margin-bottom: 100px;
+    padding: 20px; /* Añadimos padding para que no se vea el contenido pegado a los bordes. */
+}
+
+/* Botón de las redes sociales. */
+#boton {
+    padding: 10px 20px;
+    background: dodgerblue;
+    color: white;
+    border-radius: 10px;
+    margin: 10px auto; /* ¡Sutil cambio! 'auto' centraliza los botones si se definen con 'display: block'. */
+    text-decoration: none;
+    display: inline-block; /* Asegura que se vean uno al lado del otro. */
+    transition: background 0.3s, transform 0.1s; /* Agregamos la transición. */
+}
+
+#boton:hover {
+    background: #005bbb;
+    transform: scale(1.05); /* ¡Sutil cambio! El botón "rebota" un poco al pasar el ratón. */
+}
+
+/* El texto de marca de agua (AL). */
+#marca_agua {
+    font-size: 25px;
+    color: rgba(128, 128, 128, 0.4); /* ¡Sutil cambio! Usamos RGBA para hacer el color más transparente (opacity implícita). */
+    position: absolute; /* Posicionamiento exacto dentro de su padre relativo (#redes). */
+    right: 20px;
+    bottom: 20px;
+}
+
+#texto-multicolumna {
+    clear: both; /* Limpia los 'float' de las secciones anteriores para que este bloque empiece abajo. */
+    margin-top: 50px;
+}
+
+#texto-multicolumna p {
+    column-count: 2; /* Divide el párrafo en dos columnas. */
+    column-gap: 30px; /* ¡Sutil cambio! Reducimos el espacio entre columnas. */
+    column-rule: 1px dashed blue; /* ¡Sutil cambio! La línea divisoria es más delgada y punteada. */
+    margin: 20px;
+    padding: 0 10px; /* Añadimos un pequeño espacio a los lados del texto. */
+}
+
+
+#hobbies {
+    margin: 30px;
+    text-align: center; /* ¡Sutil cambio! Centramos los hobbies en la sección. */
+}
+
+/* **IMPORTANTE:** Si hay varios elementos con el mismo nombre, es mejor usar CLASE (class=".hobbie") en el HTML. */
+.hobbie {
+    display: inline-block; /* Permite que los bloques estén en línea. */
+    padding: 15px 25px;
+    border: 2px solid darkblue; /* ¡Sutil cambio! Borde azul más oscuro para más contraste. */
+    border-radius: 20px; /* ¡Sutil cambio! Bordes más redondeados. */
+    margin: 10px;
+    font-size: 18px;
+    transition: transform 0.3s ease-out; /* ¡Sutil cambio! Transición un poco más lenta y con una curva de aceleración diferente. */
+}
+
+.hobbie:hover {
+    /* El bloque crece ligeramente al pasar el ratón para dar un toque interactivo. */
+    transform: scale(1.1); /* ¡Sutil cambio! Solo escalamos para que el efecto sea más limpio y no desplace tanto el resto de la página. */
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #1a1a1a; /* ¡Sutil cambio! Un negro muy oscuro en lugar de negro puro. */
+    color: white;
+    margin-top: 40px;
+    font-size: 0.9em; /* ¡Sutil cambio! Letra ligeramente más pequeña. */
+}

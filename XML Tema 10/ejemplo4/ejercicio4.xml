@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="meteo.css" type="text/css" ?>
+<temperatura>
+    <lugar>
+        <poblacion>Málaga</poblacion>
+        <fecha>26/06/2020</fecha>
+        <máxima>Máxima: 24 ºC</máxima>
+        <mínima>Mínima: 16 ºC</mínima>
+    </lugar>
+    <previsiones>
+        <prevision estado="nubes">
+            <hora>8:00 horas</hora>
+            <grados>16 ºC</grados>
+        </prevision>
+        <prevision estado="sol">
+            <hora>16:00 horas</hora>
+            <grados>24 ºC</grados>
+        </prevision>
+        <prevision estado="lluvia">
+            <hora>20:00 horas</hora>
+            <grados>20 ºC</grados>
+        </prevision>
+    </previsiones>
+</temperatura>

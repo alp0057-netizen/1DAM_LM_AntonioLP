@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Página web</title>
+        <style>
+            #derecha{
+                float: to right;
+                width: 75px;
+                height: 100px;
+            }
+
+            h2{
+                padding-left: 10px;
+                background-color: #fce9e1;
+                border: 3ps solid black;
+                border-radius: 30px;
+            }
+            
+            aside{
+                width: 28%;
+                float: left;
+                background-color: #CDDDE3;
+                border-radius: 30px;
+                border: solid 2px black;
+                margin: 10px;
+                box-shadow: 10px 10px 10px grey;
+            }
+
+            section{
+                padding: 10px;
+                border-radius: 30px;
+                border: solid 2px black;
+                background-color: #cddde3;
+                margin: 10px;
+                overflow: hidden;
+                box-shadow: 10px 10px 10px grey;
+            }
+
+            aside nav{padding: 5px;}
+
+            footer{
+                padding: 10px;
+                background-color: black;
+                color: white;
+                clear: both;
+                text-align: to right;
+            }
+
+            *{
+                box-sizing: border-box;
+                font-family: verdana;
+            }
+
+            #titulo{
+                text-align: center;
+                text-shadow: 5px 5px 5px gray;
+            }
+
+            header ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            header ul li {
+                float: left;
+            }
+
+            header ul li a{
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+            nav ul li a :hover{
+                background-color: chocolate;
+            }
+
+            main{
+                width: 70%; 
+                float: left; 
+                overflow: hidden;
+            }
+
+            #izquierda{
+                float: left;
+                width: 120px;
+                height: 120px;
+            }
+
+        </style>
+        <body>
+            <header>
+                <h1 id="titulo">LENGUAJE DE MARCAS</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <section>
+                    <article>
+                        <h2>HTML5 ha llegado para quedarse</h2>
+                        <img src="/Tema9/Proyecto final/img/html.jpg" id="izquierda">
+                        <p>
+                            HTML5 es la última versión de HTML.
+                            El termino representa dos conceptos diferentes:
+                            Se trata de una nueva versión de HTML, 
+                            con nuevos elementos, atributos y comportamientos.
+                            Contiene un conjunto más amplio de tecnologías
+                            que permiten a los sitios Web y a las aplicaciones
+                            ser mas diversas y de gran alcance. A este conjunto 
+                            se le llama HTML5 y amigos, a menudo reducido a HTML5.
+                        </p>
+                    </article>
+                    <article>
+                        <h2>CSS3 la nueva versión de CSS</h2>
+                        <img src="/Tema9/Proyecto final/img/css.png" id="derecha">
+                        <p>
+                            CSS significa Cascade Style Sheets, también llama
+                            Hojas de Estilo en Cascada. CSS es un lenguaje de
+                            marcado que se emplea para dar formato a un sitio web.
+                            Es decir, funciona en conjunto con arcibos HTML. Por esta
+                            razón para crear un Web debes saber tanto HTML como CSS.
+                        </p>
+                    </article>
+                </section>
+            </main>
+            <aside>
+                <nav>
+                    <h2>Enlaces de interés</h2>
+                    <ul>
+                        <li><a href="@" target="_blank">W3schools</a></li>
+                        <li><a href="@" target="_blank">Formación Medac</a></li>
+                        <li><a href="@" target="_blank">Propiedaes CSS3</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <footer>
+                Creado por ...
+            </footer>
+        </body>
+</html>

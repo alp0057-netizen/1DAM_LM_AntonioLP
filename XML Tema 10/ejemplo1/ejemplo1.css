@@ -1,0 +1,19 @@
+nombre{
+    font-size: 2rem;
+    display: block;
+    border: solid 1px blue  ;
+    width: 500px;
+    padding: 10px;
+    margin: 10px auto;
+    font-family: VERDANA, Geneva, Tahoma, sans-serif;
+    FONT-WEIGHT: BOLD;
+}
+dias_de_entrega{
+    color: red;
+    display: block;
+    padding: 50px;
+    font-size: 1.5rem;
+}
+#especial{
+    color: green;
+}

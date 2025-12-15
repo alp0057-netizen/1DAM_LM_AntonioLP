@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="ejemplo1.css" type="text/css"?>
+
+<listacliente>
+    <cliente cif="A12345678"> <!-- Atributo-->
+        <nombre>Mercasa.</nombre>
+        <dias_de_entrega>Martes</dias_de_entrega>
+        <dias_de_entrega>Lunes</dias_de_entrega>
+        
+    </cliente>
+
+    <cliente cif="B87654321">
+        <nombre id="especial">Frutas S.L.</nombre>
+        <dias_de_entrega>Miércoles</dias_de_entrega>
+        <dias_de_entrega>Viernes</dias_de_entrega>
+    </cliente>
+</listacliente>
