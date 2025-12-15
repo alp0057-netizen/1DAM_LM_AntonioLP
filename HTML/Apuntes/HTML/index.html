@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Apuntes Tema 5 — Tablas y Formularios (Resumen)</title>
+  <style>
+    /* Estilos simples para presentación en VSCode / navegador */
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      line-height: 1.5;
+      margin: 24px;
+      color: #111;
+    }
+
+    header {
+      border-bottom: 2px solid #eee;
+      margin-bottom: 18px;
+      padding-bottom: 8px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #0b63a7;
+      margin-top: 18px;
+    }
+
+    code,
+    pre {
+      background: #f6f8fa;
+      padding: 6px 8px;
+      border-radius: 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+    }
+
+    pre {
+      overflow: auto;
+      max-width: 100%;
+    }
+
+    .example {
+      background: #fff;
+      border: 1px solid #eee;
+      padding: 12px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+    table.demo {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    table.demo td,
+    table.demo th {
+      border: 1px solid #ddd;
+      padding: 6px;
+      text-align: left;
+    }
+
+    footer {
+      margin-top: 24px;
+      font-size: 0.9rem;
+      color: #555;
+      border-top: 1px dashed #eee;
+      padding-top: 12px;
+    }
+
+    .note {
+      background: #fffbe6;
+      padding: 8px;
+      border-radius: 6px;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Apuntes: Tema 5 — Tablas y Formularios</h1>
+    <p>Resumen y ejemplos prácticos extraídos del documento provisto (Tema 5). :contentReference[oaicite:1]{index=1}</p>
+  </header>
+
+  <!-- 1. Introducción -->
+  <section id="introduccion">
+    <h2>1. Introducción</h2>
+    <p>
+      Este tema trata dos bloques clave en HTML:
+      <strong>Tablas</strong> — para presentar datos en filas y columnas; y
+      <strong>Formularios</strong> — para recopilar y enviar datos del usuario a un servidor.
+    </p>
+    <p class="note">Objetivo: entender las etiquetas esenciales (<code>&lt;table&gt;</code>, <code>&lt;form&gt;</code>,
+      controles) y atributos importantes (p. ej. <code>colspan</code>, <code>rowspan</code>, <code>action</code>,
+      <code>method</code>).</p>
+  </section>
+
+  <!-- 2. Tablas -->
+  <section id="tablas">
+    <h2>2. Tablas</h2>
+
+    <h3>2.1 Estructura típica</h3>
+    <p>
+      Una tabla en HTML puede contener (opcionalmente) <code>&lt;caption&gt;</code>, <code>&lt;thead&gt;</code>,
+      <code>&lt;tbody&gt;</code> y <code>&lt;tfoot&gt;</code>. Las filas son <code>&lt;tr&gt;</code>, las celdas de
+      datos <code>&lt;td&gt;</code> y las celdas de cabecera <code>&lt;th&gt;</code>.
+    </p>
+
+    <div class="example">
+      <h4>Ejemplo: estructura básica de tabla</h4>
+      <pre><code>&lt;table&gt;
+  &lt;caption&gt;Mi tabla de ejemplo&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Nombre&lt;/th&gt;&lt;th&gt;Edad&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Ana&lt;/td&gt;&lt;td&gt;28&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Luis&lt;/td&gt;&lt;td&gt;33&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;&lt;td colspan="2"&gt;Total: 2 registros&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+    </div>
+
+    <h3>2.2 &lt;col&gt; y &lt;colgroup&gt;</h3>
+    <p>
+      Para agrupar columnas y aplicar estilos específicos a columnas concretas se usan <code>&lt;colgroup&gt;</code> y
+      <code>&lt;col&gt;</code>. Útiles cuando quieres colorear o dar anchos distintos a columnas sin tocar cada celda.
+    </p>
+
+    <h3>2.3 Atributos <code>colspan</code> y <code>rowspan</code></h3>
+    <p>
+      <code>colspan</code> une celdas horizontalmente; <code>rowspan</code> las une verticalmente. El valor numérico
+      indica cuántas celdas se fusionan.
+    </p>
+
+    <div class="example">
+      <h4>Ejemplo: colspan y rowspan</h4>
+      <pre><code>&lt;table class="demo"&gt;
+  &lt;tr&gt;
+    &lt;th colspan="3"&gt;Encabezado combinado (3 columnas)&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td rowspan="2"&gt;Celda vertical larga (ocupa 2 filas)&lt;/td&gt;
+    &lt;td&gt;A1&lt;/td&gt;
+    &lt;td&gt;A2&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;B1&lt;/td&gt;
+    &lt;td&gt;B2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+    </div>
+  </section>
+
+  <!-- 3. Formularios -->
+  <section id="formularios">
+    <h2>3. Formularios</h2>
+
+    <h3>3.1 Elemento &lt;form&gt; y atributos <code>action</code> y <code>method</code></h3>
+    <p>
+      <code>&lt;form action="URL_de_procesamiento" method="get|post"&gt;</code>. <strong>action</strong> indica el
+      script/URL que recibirá los datos; <strong>method</strong> define cómo se envían:
+    </p>
+    <ul>
+      <li><strong>GET</strong>: los datos se añaden a la URL (visibles). Úsalo para datos no sensibles y búsquedas.</li>
+      <li><strong>POST</strong>: los datos van en el cuerpo de la petición (no visibles en URL). Úsalo para credenciales
+        o datos privados.</li>
+    </ul>
+
+    <h3>3.2 Atributos comunes de controles</h3>
+    <p>Los controles suelen usar: <code>type</code>, <code>name</code>, <code>value</code>, <code>required</code>,
+      <code>maxlength</code>, <code>readonly</code>, <code>disabled</code>, <code>autofocus</code>,
+      <code>tabindex</code>, etc.</p>
+
+    <h3>3.3 Controles (resumen y ejemplos)</h3>
+    <p>Tipos habituales:</p>
+    <ul>
+      <li>Botones: <code>&lt;input type="submit"&gt;, &lt;input type="reset"&gt;, &lt;input type="button"&gt;</code>
+      </li>
+      <li>Cajas de texto: <code>&lt;input type="text"&gt;, &lt;input type="password"&gt;</code>, y multi-línea
+        <code>&lt;textarea&gt;</code></li>
+      <li>Checkboxes (<code>type="checkbox"</code>) y radios (<code>type="radio"</code>)</li>
+      <li>Listas desplegables: <code>&lt;select&gt;&lt;option&gt;</code></li>
+      <li>Agrupación de controles: <code>&lt;fieldset&gt;</code> con <code>&lt;legend&gt;</code></li>
+    </ul>
+
+    <div class="example">
+      <h4>Formulario de ejemplo (GET y POST; varios controles)</h4>
+      <pre><code>&lt;!--
+  Formulario de ejemplo:
+  - action apunta a "proceso.php" (simulado)
+  - method puede ser "get" o "post"
+--&gt;
+
+&lt;form action="/proceso.php" method="post"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Datos personales&lt;/legend&gt;
+
+    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+    &lt;input type="text" id="nombre" name="nombre" required maxlength="50" autofocus /&gt;&lt;br&gt;
+
+    &lt;label for="pass"&gt;Contraseña:&lt;/label&gt;
+    &lt;input type="password" id="pass" name="clave" required /&gt;&lt;br&gt;
+
+    &lt;label&gt;Intereses:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="checkbox" id="web" name="intereses[]" value="web" checked /&gt;
+    &lt;label for="web"&gt;Desarrollo web&lt;/label&gt;
+    &lt;input type="checkbox" id="diseno" name="intereses[]" value="diseno" /&gt;
+    &lt;label for="diseno"&gt;Diseño&lt;/label&gt;&lt;br&gt;
+
+    &lt;label for="curso"&gt;Curso preferido:&lt;/label&gt;
+    &lt;select id="curso" name="curso"&gt;
+      &lt;option value="html"&gt;HTML (20h)&lt;/option&gt;
+      &lt;option value="css"&gt;CSS (15h)&lt;/option&gt;
+      &lt;option value="js"&gt;Javascript (20h)&lt;/option&gt;
+    &lt;/select&gt;&lt;br&gt;
+
+    &lt;label for="coment"&gt;Comentario:&lt;/label&gt;&lt;br&gt;
+    &lt;textarea id="coment" name="coment" rows="4" cols="40"&gt;&lt;/textarea&gt;&lt;br&gt;
+
+    &lt;input type="submit" value="Enviar" /&gt;
+    &lt;input type="reset" value="Borrar" /&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+    </div>
+
+    <p class="note">En el documento original se explica el ejemplo de formulario con <code>proceso.php</code> y la
+      diferencia observable entre GET (parámetros visibles en la URL) y POST (oculto).
+      :contentReference[oaicite:2]{index=2}</p>
+  </section>
+
+  <!-- 4. Casos prácticos -->
+  <section id="casos-practicos">
+    <h2>4. Casos prácticos (resumen)</h2>
+
+    <h3>4.1 Caso práctico 1 — "Actividades formativas"</h3>
+    <p>
+      Consiste en crear una tabla con:
+      título "ACTIVIDADES FORMATIVAS", cabecera con <em>nombre del curso</em>, <em>horario</em> y <em>horas</em>, varias
+      filas con cursos (HTML, CSS, Javascript, Jquery) y en el pie el total de horas.
+    </p>
+
+    <div class="example">
+      <h4>Solución básica (tabla con total)</h4>
+      <pre><code>&lt;table class="demo"&gt;
+  &lt;caption&gt;ACTIVIDADES FORMATIVAS&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Curso&lt;/th&gt;&lt;th&gt;Horario&lt;/th&gt;&lt;th&gt;Horas&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;HTML&lt;/td&gt;&lt;td&gt;16:00 - 20:00&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;CSS&lt;/td&gt;&lt;td&gt;9:00 - 12:00&lt;/td&gt;&lt;td&gt;15&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Javascript&lt;/td&gt;&lt;td&gt;16:00 - 20:00&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Jquery&lt;/td&gt;&lt;td&gt;16:00 - 20:00&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;&lt;td colspan="2"&gt;Total horas&lt;/td&gt;&lt;td&gt;75&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+    </div>
+
+    <h3>4.2 Caso práctico 2 — "Grupo de controles"</h3>
+    <p>
+      Uso de <code>&lt;fieldset&gt;</code> y <code>&lt;legend&gt;</code> para agrupar controles visualmente (por ejemplo
+      datos personales, preferencias, etc.). El PDF trae la solución completa en los anexos.
+      :contentReference[oaicite:3]{index=3}
+    </p>
+  </section>
+
+  <!-- 5. Resumen y buenas prácticas -->
+  <section id="resumen">
+    <h2>5. Resumen y buenas prácticas</h2>
+    <ul>
+      <li>Usa <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> y <code>&lt;tfoot&gt;</code> cuando necesites
+        agrupar y semántica clara.</li>
+      <li>Prefiere <code>POST</code> para datos sensibles; <code>GET</code> para búsquedas o filtros.</li>
+      <li>Usa <code>name</code> en todos los controles para que sus valores se envíen correctamente al servidor.</li>
+      <li>Aplica <code>required</code>, <code>maxlength</code> y validación (HTML5 y/o JavaScript) para mejorar la
+        calidad de los datos.</li>
+      <li>Usa <code>&lt;fieldset&gt;</code> y <code>&lt;legend&gt;</code> para accesibilidad y organización visual de
+        formularios.</li>
+    </ul>
+  </section>
+
+  <!-- 6. Referencias -->
+  <section id="webgrafia">
+    <h2>6. Webgrafía y recursos</h2>
+    <p>El documento referencia los siguientes recursos que también son buenos para ampliar:</p>
+    <ul>
+      <li>W3Schools — <code>w3schools.com</code></li>
+      <li>MDN Web Docs — <code>developer.mozilla.org</code></li>
+      <li>W3C — <code>w3.org</code></li>
+      <li>HTML Living Standard — <code>html.spec.whatwg.org</code></li>
+    </ul>
+    <p class="note">Para ver las soluciones completas y los anexos mencionados en el PDF, consulta el anexo indicado en
+      el material original. :contentReference[oaicite:4]{index=4}</p>
+  </section>
+
+  <footer>
+    <p>Generado a partir del material proporcionado: <em>Lenguajes de marcas y sistemas de gestión de información — Tema
+        5</em>. Si quieres que adapte estos apuntes a formato PPTX o Markdown, o que añada más ejemplos interactivos
+      (por ejemplo JavaScript para sumar horas automáticamente), dímelo y lo preparo.</p>
+  </footer>
+
+</body>
+
+</html>

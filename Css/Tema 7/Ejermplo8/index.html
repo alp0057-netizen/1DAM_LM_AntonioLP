@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #titulo {
+            text-align: center;
+            font-family: verdana;
+            letter-spacing: 3px;
+            color: blue;
+        }
+
+        table {
+            border-collapse: collapse; /*Quietar los bordes de las celdas */
+            width: 50%;
+            margin-left: 25%; /*porcentaje de margen*/
+            border: solid 3px black;
+        }
+
+        th {
+            text-align: left;
+            padding: 8px;
+            font-family: verdana;
+            font-size: 1.5rem;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        td {
+            text-align: left;
+            padding: 8px; /*Separación de texto y la tabla, ensanchar columnas o filas*/
+            font-size: 1.5rem;
+        }
+
+        .numero {
+            text-align: right;
+        }
+
+        tr {
+            border: solid 1px black;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+
+        tr:hover {
+            background-color: rgb(150, 150, 175);
+        }
+    </style>
+</head>
+<body>
+     <h1 id="titulo">DESTINOS FRECUENTES</h2>
+
+        <table>
+            <tr>
+                <th>Origen</th>
+                <th>Destino</th>
+                <th class="numero">Precio medio</th>
+            </tr>
+            <tr>
+                <td>Madrid</td>
+                <td>Eindhoven</td>
+                <td class="numero">120,08 €</td>
+            </tr>
+            <tr>
+                <td>Palma de Mallorca</td>
+                <td>Marsella</td>
+                <td class="numero">137,02 €</td>
+            </tr>
+            <tr>
+                <td>Gran Canaria</td>
+                <td>Oslo</td>
+                <td class="numero">156,67 €</td>
+            </tr>
+            <tr>
+                <td>Barcelona</td>
+                <td>Lyon</td>
+                <td class="numero">90,34 €</td>
+            </tr>
+        </table>
+
+
+
+    
+</body>
+</html>
