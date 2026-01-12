@@ -2,7 +2,27 @@
 <?xml-stylesheet type="text/css" href="componentes.css"?>
 
 <!DOCTYPE listacomponentes [
+<!ELEMENT listacomponentes (componente+)>
+<!ELEMENT componente (fabricante+, tienda*, contenido)>
+<!ELEMENT fabricante (cif, nombre, pais, ciudad?)>
+<!ELEMENT tienda (nombre, direccion, telefono, email?)>
+<!ELEMENT contenido (descripcion, consumo, garantia?, (precio_con_iva|precio_sin_iva))>
 
+<!ELEMENT cif (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT consumo (#PCDATA)>
+<!ELEMENT garantia (#PCDATA)>
+
+<!ATTLIST componente
+    id ID #REQUIRED
+    tipo (hardware|software) #REQUIRED
+    > 
 ]> 
 
 <listacomponentes>
