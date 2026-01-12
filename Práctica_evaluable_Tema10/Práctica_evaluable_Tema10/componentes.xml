@@ -18,6 +18,8 @@
 <!ELEMENT descripcion (#PCDATA)>
 <!ELEMENT consumo (#PCDATA)>
 <!ELEMENT garantia (#PCDATA)>
+<|!ELEMENT precio_con_iva (#PCDATA)>
+<!ELEMENT precio_sin_iva (#PCDATA)>
 
 <!ATTLIST componente
     id ID #REQUIRED
