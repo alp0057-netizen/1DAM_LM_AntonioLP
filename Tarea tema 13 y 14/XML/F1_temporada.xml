@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transformacion_html.xsl"?>
+<campeonato>
+    <piloto>
+        <nombre>Max Verstappen</nombre>
+        <escuderia>Red Bull Racing</escuderia>
+        <puntos>575</puntos>
+        <salario_base>45000000</salario_base>
+        <bonus>10000000</bonus>
+        <estado>Campeón</estado>
+    </piloto>
+    <piloto>
+        <nombre>Fernando Alonso</nombre>
+        <escuderia>Aston Martin</escuderia>
+        <puntos>206</puntos>
+        <salario_base>18000000</salario_base>
+        <bonus>2000000</bonus>
+        <estado>Activo</estado>
+    </piloto>
+    <piloto>
+        <nombre>Lando Norris</nombre>
+        <escuderia>McLaren</escuderia>
+        <puntos>205</puntos>
+        <salario_base>20000000</salario_base>
+        <bonus>5000000</bonus>
+        <estado>Activo</estado>
+    </piloto>
+</campeonato>
