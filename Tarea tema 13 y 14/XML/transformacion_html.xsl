@@ -3,7 +3,9 @@
   <xsl:template match="/">
     <html>
       <head>
+        //Titulo
         <title>Clasificación de Fórmula 1</title>
+        /*Aqui ponemos el estilo que llevara el xml*/
         <style>
           table { border-collapse: collapse; width: 80%; margin: 20px auto; font-family: sans-serif; }
           th, td { border: 1px solid black; padding: 10px; text-align: center; }
