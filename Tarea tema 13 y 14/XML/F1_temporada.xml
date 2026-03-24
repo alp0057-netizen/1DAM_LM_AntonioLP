@@ -25,5 +25,30 @@
         <bonus>5000000</bonus>
         <estado>Activo</estado>
     </piloto>
+    <piloto>
+        <nombre>Lewis Hamilton</nombre>
+        <escuderia>Mercedes</escuderia>
+        <puntos>175</puntos>
+        <salario_base>40000000</salario_base>
+        <bonus>15000000</bonus>
+        <estado>Activo</estado>
+    </piloto>
+    <piloto>
+        <nombre>Charles Leclerc</nombre>
+        <escuderia>Ferrari</escuderia>
+        <puntos>159</puntos>
+        <salario_base>12000000</salario_base>
+        <bonus>3000000</bonus>
+        <estado>Activo</estado>
+    </piloto>
+    <piloto>
+        <nombre>Sergio Pérez</nombre>
+        <escuderia>Red Bull Racing</escuderia>
+        <puntos>159</puntos>
+        <salario_base>20000000</salario_base>
+        <bonus>5000000</bonus>
+        <estado>Activo</estado>
+    </piloto>
+
 
 </campeonato>
