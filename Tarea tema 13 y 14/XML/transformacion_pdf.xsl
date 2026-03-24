@@ -28,7 +28,7 @@
 
                 <fo:flow flow-name="xsl-region-body">
                     
-                    <fo:block background-color="#e10600" color="white" font-family="Helvetica" font-size="22pt" font-weight="bold" padding="15pt" text-align="center" border-radius="5pt" margin-bottom="25pt">
+                    <fo:block background-color="#e10600" color="white" font-family="Helvetica" font-size="22pt" font-weight="bold" padding="15pt" text-align="center" margin-bottom="25pt">
                         RANKING DE PILOTOS Y FINANZAS
                     </fo:block>
 
