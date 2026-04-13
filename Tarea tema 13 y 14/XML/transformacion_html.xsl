@@ -3,9 +3,8 @@
   <xsl:template match="/">
     <html>
       <head>
-        //Titulo
+        
         <title>Clasificación de Fórmula 1</title>
-        /*Aqui ponemos el estilo que llevara el xml*/
         <style>
           table { border-collapse: collapse; width: 80%; margin: 20px auto; font-family: sans-serif; }
           th, td { border: 1px solid black; padding: 10px; text-align: center; }
@@ -24,10 +23,9 @@
             <th>Salario Base</th>
             <th>Salario Total (con Bonus)</th>
           </tr>
-          
+          <!-- El piloto que tenga mas puntos se le pinte de dorado -->
           <xsl:for-each select="campeonato/piloto">
             <xsl:sort select="puntos" data-type="number" order="descending"/>
-            
             <xsl:element name="tr">
               <xsl:attribute name="class">
                 <xsl:choose>
@@ -38,6 +36,7 @@
               
               <td>
                 <xsl:value-of select="nombre"/>
+                <!-- Es una tabla dinamica que al ser puntuacion  aparece una etiquta top tier-->
                 <xsl:if test="puntos &gt; 200">
                   <span style="color: red;"> (Top Tier)</span>
                 </xsl:if>
